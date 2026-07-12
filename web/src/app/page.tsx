@@ -10,49 +10,51 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-neutral-950 text-white font-sans selection:bg-emerald-500 selection:text-white scroll-smooth">
       {/* Navbar */}
-      <nav className="w-full flex justify-between items-center px-8 py-6 border-b border-white/5 backdrop-blur-md sticky top-0 z-50">
-        <div className="text-2xl font-bold tracking-tighter flex items-center gap-2">
-          <div className="w-6 h-6 rounded-full bg-emerald-500 animate-pulse shadow-[0_0_15px_rgba(16,185,129,0.5)]"></div>
+      <nav className="w-full flex justify-between items-center px-4 md:px-8 py-4 md:py-6 border-b border-white/5 backdrop-blur-md sticky top-0 z-50">
+        <div className="text-xl md:text-2xl font-bold tracking-tighter flex items-center gap-2">
+          <div className="w-5 h-5 md:w-6 md:h-6 rounded-full bg-emerald-500 animate-pulse shadow-[0_0_15px_rgba(16,185,129,0.5)]"></div>
           Arb<span className="text-emerald-500">Hunter</span>.se
         </div>
-        <div className="flex gap-6 text-sm font-medium items-center">
-          <a href="#features" className="hover:text-emerald-400 transition-colors">Features</a>
-          <a href="#pricing" className="hover:text-emerald-400 transition-colors">Pricing</a>
-          <a href="/sign-in" className="hover:text-emerald-400 transition-colors">Member Login</a>
-          <a href="#pricing" className="px-5 py-2 rounded-full bg-white text-black hover:bg-neutral-200 transition-all font-semibold">
-            Apply for Access
+        <div className="flex gap-4 md:gap-6 text-sm font-medium items-center">
+          <div className="hidden md:flex gap-6 items-center">
+            <a href="#features" className="hover:text-emerald-400 transition-colors">Features</a>
+            <a href="#pricing" className="hover:text-emerald-400 transition-colors">Pricing</a>
+            <a href="/sign-in" className="hover:text-emerald-400 transition-colors">Member Login</a>
+          </div>
+          <a href="#pricing" className="px-4 md:px-5 py-2 rounded-full bg-white text-black hover:bg-neutral-200 transition-all font-semibold text-xs md:text-sm">
+            Apply
           </a>
         </div>
       </nav>
 
       {/* Hero Section */}
-      <section className="relative px-8 pt-32 pb-20 max-w-6xl mx-auto flex flex-col items-center text-center">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-emerald-500/20 blur-[120px] rounded-full pointer-events-none"></div>
+      <section className="relative px-4 md:px-8 pt-20 md:pt-32 pb-16 md:pb-20 max-w-6xl mx-auto flex flex-col items-center text-center overflow-hidden">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-emerald-500/20 blur-[80px] md:blur-[120px] rounded-full pointer-events-none"></div>
         
-        <h1 className="text-6xl md:text-8xl font-bold tracking-tighter mb-6 relative z-10 leading-tight">
+        <h1 className="text-5xl md:text-8xl font-bold tracking-tighter mb-4 md:mb-6 relative z-10 leading-tight">
           Beat the <br/>
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">
             Swedish Bookies
           </span>
         </h1>
-        <p className="text-xl text-neutral-400 max-w-2xl mb-12 relative z-10">
+        <p className="text-lg md:text-xl text-neutral-400 max-w-2xl mb-10 md:mb-12 relative z-10">
           Real-time odds monitoring across Svenska Spel, Unibet, Betsson, and more. 
           Discover profitable surebets and value bets automatically.
         </p>
         
-        <div className="flex gap-4 relative z-10">
-          <a href="#pricing" className="px-8 py-4 rounded-full bg-emerald-500 text-black font-bold text-lg hover:bg-emerald-400 hover:scale-105 transition-all shadow-[0_0_20px_rgba(16,185,129,0.3)]">
+        <div className="flex flex-col md:flex-row gap-4 relative z-10 w-full md:w-auto">
+          <a href="#pricing" className="w-full md:w-auto px-8 py-4 rounded-full bg-emerald-500 text-black font-bold text-base md:text-lg hover:bg-emerald-400 hover:scale-105 transition-all shadow-[0_0_20px_rgba(16,185,129,0.3)]">
             Apply for Access
           </a>
-          <a href="/dashboard" className="px-8 py-4 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm text-white font-bold text-lg hover:bg-white/10 transition-all flex items-center justify-center">
+          <a href="/dashboard" className="w-full md:w-auto px-8 py-4 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm text-white font-bold text-base md:text-lg hover:bg-white/10 transition-all flex items-center justify-center">
             View Live Dashboard
           </a>
         </div>
       </section>
 
       {/* Stats / Value Prop */}
-      <section id="features" className="px-8 py-20 border-t border-white/5 relative bg-neutral-900/50">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+      <section id="features" className="px-4 md:px-8 py-16 md:py-20 border-t border-white/5 relative bg-neutral-900/50">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
           <div className="p-8 rounded-2xl border border-white/5 bg-black/40 backdrop-blur-md">
             <h3 className="text-4xl font-bold text-white mb-2">24/7</h3>
             <p className="text-neutral-400">Live monitoring of thousands of football matches.</p>
@@ -69,13 +71,13 @@ export default function Home() {
       </section>
 
       {/* Pricing Section */}
-      <section id="pricing" className="px-8 py-32 relative">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-cyan-500/10 blur-[120px] rounded-full pointer-events-none"></div>
+      <section id="pricing" className="px-4 md:px-8 py-20 md:py-32 relative overflow-hidden">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[100vw] md:w-[800px] h-[400px] bg-cyan-500/10 blur-[80px] md:blur-[120px] rounded-full pointer-events-none"></div>
         
         <div className="max-w-4xl mx-auto relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold tracking-tighter mb-6">Strictly limited to <span className="text-emerald-500">50 members.</span></h2>
-            <p className="text-xl text-neutral-400 max-w-2xl mx-auto mb-10">
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tighter mb-4 md:mb-6">Strictly limited to <span className="text-emerald-500">50 members.</span></h2>
+            <p className="text-lg md:text-xl text-neutral-400 max-w-2xl mx-auto mb-8 md:mb-10 px-2">
               To protect our members from bookmaker detection and ensure our surebets stay alive, we operate as an exclusive, invite-only syndicate.
             </p>
 
@@ -158,14 +160,14 @@ export default function Home() {
         </div>
       </section>
       {/* Footer */}
-      <footer className="w-full border-t border-white/5 bg-black py-12 px-8 mt-20">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="text-2xl font-bold tracking-tighter flex items-center gap-2 opacity-50">
+      <footer className="w-full border-t border-white/5 bg-black py-10 px-4 md:px-8 mt-12 md:mt-20">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
+          <div className="text-xl md:text-2xl font-bold tracking-tighter flex items-center gap-2 opacity-50">
             <div className="w-4 h-4 rounded-full bg-emerald-500"></div>
             Arb<span className="text-emerald-500">Hunter</span>.se
           </div>
           
-          <div className="flex gap-8 text-sm text-neutral-500">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 text-sm text-neutral-500">
             <a href="/terms" className="hover:text-emerald-400 transition-colors">Terms of Use</a>
             <a href="/privacy" className="hover:text-emerald-400 transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-emerald-400 transition-colors">Contact Support</a>
