@@ -1,0 +1,8 @@
+requests
+httpx
+curl_cffi
+playwright
+beautifulsoup4
+asyncio
+python-dotenv
+supabase
